@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+	function preventBack() {
+		window.history.forward();
+	}
+	setTimeout("preventBack()", 0);
+	window.onunload = function() {
+		null
+	};
+</script>
+<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+	integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href=""
+	th:href="@{/css/index.css}">
+<link rel="stylesheet" type="text/css" href=""
+	th:href="@{/css/style51a2.css}">
+<title>Home Page</title>
+
+</head>
+<body>
+
+	<div
+		class="home page-template page-template-template-full-custom page-template-template-full-custom-php page page-id-5 slider-active dark-header icons-style-dark parallax-header">
+		<div id="main-container">
+			<div class="page-wrapper">
+				<nav class="navbar navbar-expand-lg sticky-top"
+					style="background-color: rgb(21, 20, 20);">
+					<div class="container-fluid">
+
+						<button class="navbar-toggler" type="button"
+							data-toggle="collapse" data-target="#navbarSupportedContent"
+							aria-controls="navbarSupportedContent" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						
+						<a class="navbar-brand" href="#"> 
+				<span style="font-family: fantasy; font-size: 25px; color: white;">Rent-A-Ride</span>
+			</a>
+						
+							<ul class="navbar-nav mr-auto"></ul>
+							<ul class="navbar-nav">
+								<li class="nav-item active"><a class="nav-link"
+									th:href="@{/}" href="#"
+									style="color: white; font-size: 1.3rem;">Home</a></li>
+
+
+								<li class="nav-item active"><a class="nav-link"
+									th:href="@{/garrage}" style="color: white; font-size: 1.3rem;"
+									href="#">Garage</a></li>
+								<li class="nav-item active"><a class="nav-link"
+									sec:authorize="isAnonymous()"
+									style="color: white; font-size: 1.3rem;" th:href="@{/login}"
+									href="#">Login</a></li>
+								<li class="nav-item active"><a class="nav-link"
+									sec:authorize="isAuthenticated()"
+									style="color: white; font-size: 1.3rem;" th:href="@{/logout}"
+									href="#">Logout</a>
+							</ul>
+						</div>
+					</div>
+				</nav>
+
+				<!--  <img th:src="@{/images/icon.png}"  src="../static/images/icon.png" class="d-inline-block align-top" alt=""/>  -->
+				<div class="item-2">
+					<div class="slider">
+						<div class="load"></div>
+					</div>
+				</div>
+				<div id="content-container" class=" layout-full">
+					<div id="full-width" class="content">
+						<div class="custom-page-content">
+							<div class="section-full-width section-light"
+								style="background-color: #f7f7f7;" id="aboutloans">
+								<div
+									style="background-image: url(../static/images/bg-main.jpg); opacity: 0.5; filter: alpha(opacity = 50);"
+									class="full-bg-image"></div>
+								<div class="section-boxed" style="color: #777777;">
+
+									<h2 class="section-title" style="color: #252525;">Rent-a-Ride</h2>
+									<div class="pexeto-recent-posts rp-columns">
+										<div class="cols-wrapper cols-4">
+											<div class="col rp">
+												<div class="rp-header">
+													<a href="tips-gear-increasing-inflation-rates/index.html"><img
+														src="../static/images/nano.jpg"
+														th:src="@{/images/nano.jpg}" alt="Inflation-Rates" /></a>
+												</div>
+												<h4 class="rp-post-title">
+													<a href="https://en.wikipedia.org/wiki/Tata_Nano">Renting
+														Safe cars in Cheap Prices </a>
+												</h4>
+												<p>Rental Price:- ₹500/Day Mileage (ARAI) kmpl 23.6 kmpl
+													Fuel Type Petrol [&hellip;]</p>
+												<a class="read-more"
+													href="tips-gear-increasing-inflation-rates/index.html">Read
+													More <span class="more-arrow">&rsaquo;</span>
+												</a>
+											</div>
+											<div class="col rp">
+												<div class="rp-header">
+													<a
+														href="mobiles-smartphone-apps-drive-personal-loan-sales-2022/index.html"><img
+														src="../static/images/Camry.jpg"
+														th:src="@{/images/Camry.jpg}" alt="Digital-Lending-2022" /></a>
+												</div>
+												<h4 class="rp-post-title">
+													<a
+														href="mobiles-smartphone-apps-drive-personal-loan-sales-2022/index.html">Sedan
+														Cars with Automatic Climate Control and Much More...</a>
+												</h4>
+												<p>
+													Rental Price:- ₹1500/Day <br> An automatic climate
+													control system has become standard fitment in cars. It made
+													driving easier, added comfort, and adds feel-good
+													features.[&hellip;]
+												</p>
+												<a class="read-more"
+													href="mobiles-smartphone-apps-drive-personal-loan-sales-2022/index.html">Read
+													More <span class="more-arrow">&rsaquo;</span>
+												</a>
+											</div>
+											<div class="col rp">
+												<div class="rp-header">
+													<a
+														href="interim-budgets-effect-second-home-loan-tax-benefits/index.html"><img
+														src="../static/images/creta.jpg"
+														th:src="@{/images/creta.jpg}" alt="home-loan-budget-2019" /></a>
+												</div>
+												<h4 class="rp-post-title">
+													<a
+														href="interim-budgets-effect-second-home-loan-tax-benefits/index.html">
+														Suv cars with 4+ Air Bags</a>
+												</h4>
+												<p>
+													Rental Price:- ₹1400/Day <br>With Panaromic Sunroof
+													and Good Music System. [&hellip;]
+												</p>
+												<a class="read-more"
+													href="interim-budgets-effect-second-home-loan-tax-benefits/index.html">Read
+													More <span class="more-arrow">&rsaquo;</span>
+												</a>
+											</div>
+											<div class="col rp nomargin">
+												<div class="rp-header">
+													<a
+														href="will-home-loan-rates-come-rbis-25-bps-reduction-repo-rate/index.html"><img
+														src="../static/images/family_car.jpg"
+														th:src="@{/images/family_car.jpg}" alt="" /></a>
+												</div>
+												<h4 class="rp-post-title">
+													<a
+														href="will-home-loan-rates-come-rbis-25-bps-reduction-repo-rate/index.html">Will
+														Big Family Cars Available With Tilt & Telescopic Steering</a>
+												</h4>
+												<p>
+													Rental Price:- ₹1700/Day <br> Steering wheel
+													adjustment function is one of the most important features
+													available in cars. It allows the driver to achieve the best
+													driving position. [&hellip;]
+												</p>
+												<a class="read-more"
+													href="will-home-loan-rates-come-rbis-25-bps-reduction-repo-rate/index.html">Read
+													More <span class="more-arrow">&rsaquo;</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="section-full-width section-dark-bg parallax-fixed"
+								style="background-color: #001438; min-height: 400px;"
+								id="section-2">
+								<div
+									style="background-image: url(../static/images/bmw.jpg); opacity: 0.2; filter: alpha(opacity = 20);"
+									class="full-bg-image"></div>
+								<div class="section-boxed" style="color: #ffffff;">
+									<div class="cta-element">
+										<h4 class="cta-small-title">Rent-A-Ride</h4>
+										<h2 class="cta-title">Why To Rent a Car from us ?</h2>
+										<a class="button" href="policy.html"
+											style="background-color: #034b94" target="_blank">About
+											Our Policy</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="section-full-width section-light background-contain"
+								style="background-color: #f7f7f7;" id="Rent-A-Ride">
+								<div class="section-boxed" style="color: #333333;">
+									<h4 style="color: #333333;" class="sub-title">Why</h4>
+									<h2 class="section-title" style="color: #333333;">Rent-A-Ride</h2>
+									<div class="pexeto-recent-posts rp-columns">
+										<div class="cols-wrapper cols-4">
+											<div class="col rp">
+												<div class="rp-header">
+													<a href="tips-gear-increasing-inflation-rates/index.html"><img
+														src="../static/images/hire.jpg"
+														th:src="@{/images/hire.jpg}" alt="Inflation-Rates" /></a>
+												</div>
+												<h4 class="rp-post-title">
+													<a href="tips-gear-increasing-inflation-rates/index.html">What
+														do i need to hire a car ? </a>
+												</h4>
+												<p>To Book your car, All you need is to register and
+													Select a car. And your passport and any Other ID needs to
+													see. [&hellip;]</p>
+												<a class="read-more"
+													href="tips-gear-increasing-inflation-rates/index.html">Read
+													More <span class="more-arrow">&rsaquo;</span>
+												</a>
+											</div>
+											<div class="col rp">
+												<div class="rp-header">
+													<a
+														href="mobiles-smartphone-apps-drive-personal-loan-sales-2022/index.html"><img
+														src="../static/images/youngman.jpg"
+														th:src="@{/images/youngman.jpg}"
+														alt="Digital-Lending-2022" /></a>
+												</div>
+												<h4 class="rp-post-title">
+													<a
+														href="mobiles-smartphone-apps-drive-personal-loan-sales-2022/index.html">
+														How old do i have to be to rent a car ?</a>
+												</h4>
+												<p>For most car hire companies, the age requirement is
+													between 21 and 70 years old. if you're under 25 or over 70
+													, you might have to pay an additional fee. [&hellip;]</p>
+												<a class="read-more"
+													href="mobiles-smartphone-apps-drive-personal-loan-sales-2022/index.html">Read
+													More <span class="more-arrow">&rsaquo;</span>
+												</a>
+											</div>
+											<div class="col rp">
+												<div class="rp-header">
+													<a
+														href="interim-budgets-effect-second-home-loan-tax-benefits/index.html"><img
+														src="../static/images/else.jpg"
+														th:src="@{/images/else.jpg}" alt="home-loan-budget-2019" /></a>
+												</div>
+												<h4 class="rp-post-title">
+													<a
+														href="interim-budgets-effect-second-home-loan-tax-benefits/index.html">
+														Can you book a hire car for someone else?</a>
+												</h4>
+												<p>Yes, as long as they meet these requirements . Just
+													fill in their details while you're making the
+													reservation.[&hellip;]</p>
+												<a class="read-more"
+													href="interim-budgets-effect-second-home-loan-tax-benefits/index.html">Read
+													More <span class="more-arrow">&rsaquo;</span>
+												</a>
+											</div>
+											<div class="col rp nomargin">
+												<div class="rp-header">
+													<a
+														href="will-home-loan-rates-come-rbis-25-bps-reduction-repo-rate/index.html"><img
+														src="../static/images/features.jpg"
+														th:src="@{/images/ features.jpg}" alt="" /></a>
+												</div>
+												<h4 class="rp-post-title">
+													<a
+														href="will-home-loan-rates-come-rbis-25-bps-reduction-repo-rate/index.html">
+														What should i look for when i'm choosing a car ? </a>
+												</h4>
+												<p>Space: You'll enjoy your rental far more if you
+													choose a car with plenty of room for your Family. Fuel
+													policy: Not planning on driving much? A Like for like fuel
+													policy can save you a lot of money. [&hellip;]</p>
+												<a class="read-more"
+													href="will-home-loan-rates-come-rbis-25-bps-reduction-repo-rate/index.html">Read
+													More <span class="more-arrow">&rsaquo;</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+
+					<footer class="footer-section">
+						<div class="container">
+							<div class="footer-cta pt-5 pb-5">
+								<div class="row">
+									<div class="col-xl-4 col-md-4 mb-30">
+										<div class="single-cta">
+											<i class="fas fa-map-marker-alt"></i>
+											<div class="cta-text">
+												<h4>Find us</h4>
+												<span>Pune</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-4 col-md-4 mb-30">
+										<div class="single-cta">
+											<i class="fas fa-phone"></i>
+											<div class="cta-text">
+												<h4>Call us</h4>
+												<span>9876543210</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-4 col-md-4 mb-30">
+										<div class="single-cta">
+											<i class="far fa-envelope-open"></i>
+											<div class="cta-text">
+												<h4>Mail us</h4>
+												<span>help@rent-a-ride.net</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="footer-content pt-5 pb-5">
+								<div class="row">
+									<div class="col-xl-4 col-lg-4 mb-50">
+										<div class="footer-widget">
+											<div class="footer-logo">
+												<a href="index.html"><img
+													th:src="@{/images/logo192.png}"
+													src="../static/images/logo192.png" width="auto" height="40"></a>
+											</div>
+											<div class="footer-text">
+												<p>
+													<b>Price </b> is what you pay <b> Value </b>is what you
+													Get.
+												</p>
+											</div>
+											<div class="footer-social-icon">
+												<span>Follow us</span> <a href="https://www.facebook.com"><i
+													class="fab fa-facebook-f facebook-bg"></i></a> <a
+													href="https://www.Twitter.com/"><i
+													class="fab fa-twitter twitter-bg"></i></a> <a
+													href="https://www.google.com/"><i
+													class="fab fa-google-plus-g google-bg"></i></a>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+										<div class="footer-widget">
+											<div class="footer-widget-heading">
+												<h3>Useful Links</h3>
+											</div>
+											<ul>
+												<li><a href="#">Home</a></li>
+												<li><a href="#">About us</a></li>
+												<li><a href="#">Our Services</a></li>
+												<li><a href="#">Contact us</a></li>
+
+											</ul>
+										</div>
+									</div>
+									<div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+										<div class="footer-widget">
+											<div class="footer-widget-heading">
+												<h3>Subscribe</h3>
+											</div>
+											<div class="footer-text mb-25">
+												<p>Don’t miss to subscribe to our new feeds, kindly fill
+													the form below.</p>
+											</div>
+											<div class="subscribe-form">
+												<form action="#">
+													<input type="text" placeholder="Email Address">
+													<button>
+														<i class="fab fa-telegram-plane"></i>
+													</button>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="copyright-area">
+							<div class="container">
+								<div class="row">
+									<div class="col-xl-6 col-lg-6 text-center text-lg-left">
+										<div class="copyright-text">
+											<p>
+												Copyright &copy; 2022, All Right Reserved <a href="#">ACTS-CDAC,Pune</a>
+											</p>
+										</div>
+									</div>
+									<div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+										<div class="footer-menu">
+											<ul>
+												<li><a href="#">Home</a></li>
+												<li><a href="#">Terms</a></li>
+												<li><a href="#">Privacy</a></li>
+												<li><a href="#">Policy</a></li>
+												<li><a href="#">Contact</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</footer>
+
+
+					<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+						integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+						crossorigin="anonymous"></script>
+					<script
+						src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+						integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+						crossorigin="anonymous"></script>
+					<script
+						src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+						integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+						crossorigin="anonymous"></script>
+				</div>
+			</div>
+		</div>
+		</div>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+	<link rel="stylesheet" type="text/css" href="" th:href="@{/css/viewvehicle.css}">
+
+	<title>Invoice</title>
+</head>
+
+<body>
+
+
+	<nav class="navbar navbar-expand-lg sticky-top" style="background-color: rgb(21,20,20);">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img th:src="@{/images/logo192.png}" src="../static/images/logo192.png" width="auto" height="40"
+					class="d-inline-block align-top" alt="" />
+				<span style="font-family: fantasy; font-size: 25px; color: white;">Rent-A-Ride</span>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto"></ul>
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" th:href="@{/}" style="color: white; font-size: 1.3rem;" href="#">Home</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" th:href="@{/garrage}" style="color: white; font-size: 1.3rem;"
+							href="#">Garage</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" sec:authorize="isAnonymous()" style="color: white; font-size: 1.3rem;"
+							th:href="@{/login}" href="#">Login</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" sec:authorize="isAuthenticated()" style="color: white; font-size: 1.3rem;"
+							th:href="@{/logout}" href="#">Logout</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" th:href="@{/carry}" style="color: white; font-size: 1.3rem;"
+							href="#">Booking List</a>
+					</li>
+					<li class="nav-item active">
+						<span class="nav-link" th:text="${cartCount}">0</span>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<form th:action="@{/savebillingdetails}" th:object="${billDetails}" method="POST">
+			<!--Section: Block Content-->
+			<section class="mt-5 mb-4">
+
+				<!--Grid row-->
+				<div class="row">
+
+					<!--Grid column-->
+					<div class="col-lg-8 mb-4">
+
+						<!-- Card -->
+						<div class="card wish-list pb-1">
+							<div class="card-body">
+
+								<h5 class="mb-2">Billing details</h5>
+
+								<!-- Grid row -->
+								<div class="row">
+
+									<!-- Grid column -->
+									<div class="col-lg-6">
+
+										<!-- First name -->
+										<div class="md-form md-outline mb-0 mb-lg-4">
+											<label for="firstName">First name</label>
+											<input type="text" class="form-control" id="firstName"
+												placeholder="Enter First Name" name="firstName"
+												th:field="*{firstName}" /> <br />
+											<p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"
+					class="alert alert-danger"></p>
+										</div>
+
+									</div>
+									<!-- Grid column -->
+
+									<!-- Grid column -->
+									<div class="col-lg-6">
+
+										<!-- Last name -->
+										<div class="md-form md-outline">
+											<label for="lastName">Last name</label>
+											<input type="text"
+					class="form-control" id="lastName" placeholder="Enter Last Name"
+					name="lastName" th:field="*{lastName}"/> <br />
+				<p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"
+					class="alert alert-danger"></p>
+										</div>
+
+									</div>
+									<!-- Grid column -->
+
+								</div>
+								<!-- Grid row -->
+
+
+
+								<!-- Country -->
+								<div class="d-flex flex-wrap">
+									<div class="select-outline position-relative w-100">
+										<label>Country - <strong>INDIA</strong></label>
+
+
+									</div>
+								</div>
+
+								<!-- Address Part 1 -->
+								<div class="md-form md-outline mt-2">
+									<label for="form14">Address (Line 1)</label>
+									<input type="text"
+					class="form-control" id="Adrressp1" placeholder="Apartment, suite, unit etc. (optional)"
+					name="Adrressp1" th:field="*{Adrressp1}"/> <br />
+				<p th:if="${#fields.hasErrors('Adrressp1')}" th:errors="*{Adrressp1}"
+					class="alert alert-danger"></p>
+								</div>
+
+								<!-- Address Part 2 -->
+								<div class="md-form md-outline mt-2">
+									<label for="form15">Address (Line 2)</label>
+									<input type="text"
+					class="form-control" id="Adrressp2" placeholder="Apartment, suite, unit etc. (optional)"
+					name="Adrressp2" th:field="*{Adrressp2}"/> <br />
+				<p th:if="${#fields.hasErrors('Adrressp2')}" th:errors="*{Adrressp2}"
+					class="alert alert-danger"></p>
+								</div>
+
+								<!-- Postcode / ZIP -->
+								<div class="md-form md-outline mt-3">
+									<label for="form16">Postcode / ZIP</label>
+										<input type="text"
+					class="form-control" id="postcode" placeholder="Apartment, suite, unit etc. (optional)"
+					name="postcode" th:field="*{postcode}"/> <br />
+				<p th:if="${#fields.hasErrors('postcode')}" th:errors="*{postcode}"
+					class="alert alert-danger"></p>
+								</div>
+
+								<!-- Town / City -->
+								<div class="md-form md-outline mt-2">
+									<label for="form17">Town / City</label>
+									<input type="text"
+					class="form-control" id="city" placeholder="Your city name"
+					name="city" th:field="*{city}"/> <br />
+				<p th:if="${#fields.hasErrors('city')}" th:errors="*{city}"
+					class="alert alert-danger"></p>
+
+								</div>
+
+								<!-- Phone -->
+								<div class="md-form md-outline mt-2">
+									<label for="phoneNo">Phone</label>
+									<input type="text"
+					class="form-control" id="phoneNo" placeholder="Your phone-no name"
+					name="phoneNo" th:field="*{phoneNo}"/>
+
+								</div>
+
+								<!-- Email address -->
+								<div class="md-form md-outline mt-2">
+									<label for="form19">Email address</label>
+									<input type="text"
+					class="form-control" id="Email" placeholder="Your phone-no name"
+					name="Email" th:field="*{Email}"/> <br />
+				<p th:if="${#fields.hasErrors('Email')}" th:errors="*{Email}"
+					class="alert alert-danger"></p>
+								</div>
+
+								<!-- Additional information -->
+								<div class="md-form md-outline mt-2">
+									<label for="form76">Additional information</label>
+									<textarea id="form76" th:field="*{AddInfo}" class="md-textarea form-control" rows="4"></textarea>
+								</div>
+
+
+
+							</div>
+						</div>
+						<!-- Card -->
+
+					</div>
+					<!--Grid column-->
+
+					<!--Grid column-->
+					<div class="col-lg-4">
+
+						<!-- Card -->
+						<div class="card mb-4">
+							<div class="card-body">
+
+								<h5 class="mb-3">The total amount </h5>
+
+								<ul class="list-group list-group-flush">
+									<li
+										class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+										Amount Payable
+										<span>₹<span th:text="${total}" th:value="${total}" name="total"></span></span>
+										<input type="hidden" name="total" th:value="${total}"/>
+									</li>
+				
+									<li
+										class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+										<div>
+											<strong>The total amount of</strong>
+											<strong>
+												<p class="mb-0">(including GST)</p>
+											</strong>
+										</div>
+										<span><strong>₹<span th:text="${total}" th:value="${total}" name="ftotal"></span></strong></span>
+										<input type="hidden" name="ftotal" th:value="${total}"/>
+									</li>
+								</ul>
+
+								
+									<button type="submit" class="btn btn-primary btn-block waves-effect waves-light">Pay
+										Now</button>
+								
+
+							</div>
+						</div>
+						<!-- Card -->
+
+						<!-- Card -->
+
+						<!-- Card -->
+
+					</div>
+					<!--Grid column-->
+
+				</div>
+				<!--Grid row-->
+
+			</section>
+			<!--Section: Block Content-->
+
+		</form>
+	</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
